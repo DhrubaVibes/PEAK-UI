@@ -1,0 +1,126 @@
+
+
+.featured-image-wrapper{
+    width: 100vw;
+    height: 30vh;
+    overflow: hidden;
+    padding: 0 !important;
+    margin:0 !important;
+    position: relative;
+
+}
+
+
+.featured-image-wrapper-overlay{
+    position: absolute;
+    top:30%;
+}
+
+.the-bar{
+    display: inline-block;
+    color:white;
+    border: 3px solid white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.chef-area{
+    display: inline-block;
+    color:white;
+    border: 3px solid white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    font-weight: bolder;
+    padding: 6px;
+}
+
+.more{
+    text-align: center;
+}
+
+
+.featured-img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+
+
+.menu-wrapper{
+    margin-top: 30px;
+    text-align: center;
+ }
+
+li{
+    background: black;
+    color: white;
+    border-radius: 6px;
+    padding: 6px;
+    margin:3px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+ 
+}
+
+li:hover{
+    background: white;
+    color: rgb(212, 71, 71) !important;    
+    text-decoration: underline !important;    
+}
+
+.food-items-wrapper{
+    width: 80%;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 9px;
+    justify-content: left;
+}
+
+.food-item-wrapper{
+    border: 0px solid white;
+    text-align: left;
+}
+
+.title{
+    font-weight: bolder;
+    float:left;
+    font-size: 1.2em;
+}
+.price{
+    font-weight: bold;
+    float: right;
+}
+.food-item-category{
+    font-weight: bolder;
+    padding: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    
+}
+
+
+.store-events-image-wrapper{
+
+    position: relative;
+    margin: 1.5vw;
+ }
+
+ .store-events-image-wrapper img{
+    border-radius: 12px;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+
+ }
+
+ .img-scale{
+     transition: transform 0.2s;
+ }
+
+ .img-scale:hover{
+     transform: scale(1.04);
+ }

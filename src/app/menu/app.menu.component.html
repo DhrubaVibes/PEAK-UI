@@ -1,0 +1,290 @@
+<div class="animated-d slideInRight">
+
+
+    <div #chef class="featured-image-wrapper">
+
+        <img class="featured-img"
+            src="https://static1.squarespace.com/static/56c120a74c2f85e5d69e9108/t/5b6085a7352f53c1e4e3c7c5/1533052336973/MenuPage_Banner.jpg?format=2500w">
+
+        <div class="featured-image-wrapper-overlay">
+
+            <div style="width: 100vw; text-align:center;">
+                <h1 class="chef-area section-title">CHEF'S AREA</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="menu-wrapper">
+
+        <div class="food-menu-list">
+            <ul>
+                <li class="filter" (click)="getLunchSpecials()" data-filter=".peakspecials">Lunch Specials</li>
+                <li class="filter" (click)="getWeekendSpecial()" data-filter=".peakspecials">Weekend Specials</li>
+                <li class="filter" (click)="getSocialHour()" data-filter=".peakspecials">Happy Hour Specials</li>
+
+                <li class="filter" (click)="getStarterItems()" data-filter=".starter">starter</li>
+                <li class="filter" (click)="getSoupsAndSalads()" data-filter=".soups">Soups</li>
+                <li class="filter" (click)="getHimalayanTiffin()" data-filter=".himalayan">Himalayan</li>
+                <li class="filter" (click)="getChikcenSpecial()" data-filter=".chickenspecial">Chicken Specials</li>
+                <li class="filter" (click)="getSeaFoodEntrees()" data-filter=".seafood">Sea Food</li>
+                <li class="filter" (click)="getLambSpecial()" data-filter=".lambSpecials">Lamb Specials</li>
+                <li class="filter" (click)="getGoatSpecial()" data-filter=".goatspecials">Goat Specials</li>
+                <li class="filter" (click)="getRiceAndBiryani()" data-filter=".riceandbiryani">Rice/Biryani</li>
+                <li class="filter" (click)="getTandooriBreads()" data-filter=".tandoori">Tandoori and Bread</li>
+                <li class="filter" (click)="getNoodles()" data-filter=".noodles">Noodles</li>
+                <li class="filter" (click)="getVegetableEntrees()" data-filter=".vegentrees">Veg Entrees</li>
+                <li class="filter" (click)="getThakaliThali()" data-filter=".thakali">Thakali</li>
+                <li class="filter" (click)="getTibetan()" data-filter=".tibetan">Tibetan</li>
+                <li class="filter" (click)="getDelight()" data-filter=".delight">Delight</li>
+            </ul>
+
+            <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+                <h4 class="col-lg-12 food-item-category">{{category}}</h4>
+
+                <div class="food-item-wrapper col-lg-4" *ngFor="let food of activeItems">
+                    <div class="food-item-header">
+                        <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                    </div>
+                    <br><br>
+                    <p class="desc">{{food.desc}}</p>
+
+                </div>
+            </div>
+
+            <br>
+            <div *ngIf="activeDrinks" class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+                <h4 class="col-lg-12 food-item-category">DRINKS</h4>
+
+                <div class="food-item-wrapper col-lg-4" *ngFor="let food of activeDrinks">
+                    <div class="food-item-header">
+                        <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                    </div>
+                    <br><br>
+                    <p class="desc">{{food.desc}}</p>
+
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+    </div>
+
+
+    <div #bar class="featured-image-wrapper">
+        <img class="featured-img"
+            src="https://static1.squarespace.com/static/56c120a74c2f85e5d69e9108/t/5b60838a2b6a28ea73da8af8/1533051796203/BarPage_Banner.jpg?format=2500w">
+
+        <div class="featured-image-wrapper-overlay">
+
+            <div style="width: 100vw; text-align:center;" class="pointer">
+
+                <h1 class="the-bar section-title">THE BAR
+                    <p class="more section-title">BEER + WINE + COCKTAILS + MORE...</p>
+                </h1>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <p style="text-align: center;" class="bold"> We have a selection of cocktails that are only unique to us. </p>
+
+    <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1); padding: 10px 3px 10px 3px">
+
+        <h4 class="col-12  food-item-category" style="display:block; width:100%; text-align:center">PEAK SPECIALS</h4>
+        <br><br>
+
+        <div class="food-item-wrapper col-lg-4" *ngFor="let food of getPeakSpecialDrinks()">
+            <div class="food-item-header">
+                <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+            </div>
+            <br><br>
+            <p class="desc">{{food.desc}}</p>
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+
+        <div class="col-4 pointer store-events-image-wrapper">
+            <img class="img-scale" src="../../assets/img/drinks/mule.jpg">
+            <h4 class="img-tag-plain  bold">MOSCOW-MULE</h4>
+
+        </div>
+        <div class="col-4 pointer store-events-image-wrapper">
+            <img class="img-scale" src="../../assets/img/drinks/danphe.jpg">
+            <h4 class="img-tag-plain  bold">MT. 8848</h4>
+
+        </div>
+        <div class="col-4 pointer store-events-image-wrapper">
+            <img class="img-scale" src="../../assets/img/drinks/doe.jpg">
+            <h4 class="img-tag-plain bold">GREEN MAMBA</h4>
+        </div>
+
+    </div>
+
+    <a class="animated infinite pulse delay-15s" data-toggle="collapse" href="#drinks-collapsible"
+        style="text-align: center; display: block; color: black; padding: 6px"> Checkout
+        the full menu. </a>
+    <br>
+
+    <div class="collapse" id="drinks-collapsible">
+
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">BEER</h4>
+            <h6 class="col-lg-12 food-item-category">DRAFT BEER AVAILABLE [16 Oz/23 Oz]. Ask Server what's on tap</h6>
+
+
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.beers">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">FIZZY/LIGHT</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.fizzyLight">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">SHOTS</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.shots">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">WINE</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.wine">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">{{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">SCOTCH</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.scotch">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">BEER</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.beers">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">TEQUILA</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.tequila">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">VODKA</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.vodka">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">RUM</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.rum">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+        <div class="food-items-wrapper row" style="background: rgba(165, 163, 163,0.1)">
+
+            <h4 class="col-lg-12 food-item-category">GIN</h4>
+
+            <div class="food-item-wrapper col-lg-4" *ngFor="let food of starter.gin">
+                <div class="food-item-header">
+                    <span class="title">{{food.name}}</span><span class="price">${{food.price}}</span>
+                </div>
+                <br><br>
+                <p class="desc">{{food.desc}}</p>
+
+            </div>
+        </div>
+
+
+        <h5 class="col-lg-12 food-item-category">DRINK RESPONSIVELY. DRIVE RESPONSIVELY.</h5>
+        <small style="display: block; width: 100%; text-align: center;"> * Must be 21 and over to purchase and consume
+            alcohol</small>
+        <br>
+    </div>
+</div>

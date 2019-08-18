@@ -1,0 +1,34 @@
+.bg-black{
+    background-color: black;
+}
+
+.white{
+    color: white;
+}
+.fantasy{
+    font-family: fantasy;
+}
+
+.red{
+    color: rgb(212, 71, 71);
+}
+
+.txt-big{
+    font-size: 1.3em;
+}
+
+.margined-top{
+    margin-top: 15px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.no-border{
+    border: none;
+} 
+
+.no-bg{
+    background: transparent !important;
+}

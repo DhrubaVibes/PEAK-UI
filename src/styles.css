@@ -1,0 +1,252 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/css/colors.css";
+@import "assets/css/menu.css";
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100vw;
+    overflow-x:hidden;
+    scroll-behavior: smooth !important;
+}
+
+
+
+
+.img-tag-plain{
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding:6px;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .food-card-image-wrapper,.store-events-image-wrapper,.instagram-class>img{
+        
+        min-width: 85vw !important;
+        min-height: 85vw !important;
+        max-width: 85vw !important;
+        max-height: 85vw !important;
+        position: relative;
+       margin: 0;
+       padding: 0;
+       margin-bottom: 2vw; 
+     }
+     .glimpses-wrapper{
+        width: 350px;
+        height: 300px;
+      }    
+     .slider-wrapper{
+        height: 20vh;    
+    }
+    .navbar-brand-logo{
+        width: 180px;
+        height: 85px;
+    }
+
+     .group-event-image-wrapperr{
+        min-width: 85vw !important;
+        min-height: 85vw !important;
+        max-width: 85vw !important;
+        max-height: 85vw !important;
+
+      }
+  
+     .section-title{
+        font-size: 30px;
+     }
+    .section-subtitle{
+        font-size: 15px;
+    }
+
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .food-card-image-wrapper,.store-events-image-wrapper,.instagram-class>img{
+        
+        min-width: 40vw !important;
+        min-height: 40vw !important;
+        max-width: 40vw !important;
+        max-height: 40vw !important;
+        position: relative;
+        margin: 1.5vw;
+
+    }
+
+    .glimpses-wrapper{
+        width: 500px;
+        height: 380px;
+      }    
+
+    .navbar-brand-logo{
+        width: 180px;
+        height: 85px;
+    }
+
+    .slider-wrapper{
+        height: 25vh;    
+    }
+
+    .group-event-image-wrapperr{
+        min-width: 40vw !important;
+        min-height: 40vw !important;
+        max-width: 40vw !important;
+        max-height: 40vw !important;
+      }
+  
+    .section-title{
+        font-size: 30px;
+     }
+    .section-subtitle{
+        font-size: 15px;
+    }
+
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .food-card-image-wrapper,.store-events-image-wrapper,.instagram-class>img{
+        
+        min-width: 30vw !important;
+        min-height: 30vw !important;
+        max-width: 30vw !important;
+        max-height: 30vw !important;
+        position: relative;
+        margin: 1.5vw;
+    }
+
+    .navbar-brand-logo{
+        width: 200px;
+        height: 95px;
+    }
+
+    .glimpses-wrapper{
+        width: 700px;
+        height: 500px;
+      }    
+
+    .group-event-image-wrapperr{
+        min-width: 18vw !important;
+        min-height: 18vw !important;
+        max-width: 18vw !important;
+        max-height: 18vw !important;
+
+      }
+
+      .slider-wrapper{
+        height: 30vh;    
+    }
+
+  
+
+    .section-title{
+        font-size: 30px;
+     }
+    .section-subtitle{
+        font-size: 15px;
+    }
+
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .food-card-image-wrapper,.store-events-image-wrapper,.instagram-class>img{
+        
+        min-width: 18vw !important;
+        min-height: 18vw !important;
+        max-width: 18vw !important;
+        max-height: 18vw !important;
+        position: relative;
+        margin: 1.5vw;
+    }
+
+    .navbar-brand-logo{
+        width: 220px;
+        height: 105px;
+    }
+
+    .group-event-image-wrapperr{
+        min-width: 20vw !important;
+        min-height: 20vw !important;
+        max-width: 18vw !important;
+        max-height: 18vw !important;
+
+    }
+
+    .glimpses-wrapper{
+        width: 1000px;
+        height: 700px;
+      }    
+    .slider-wrapper{
+        height: 35vh;    
+    }
+
+    .section-title{
+        font-size: 35px;
+     }
+    .section-subtitle{
+        font-size: 18px;
+    }
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .food-card-image-wrapper,.store-events-image-wrapper,.instagram-class>img{
+        
+        min-width: 18vw !important;
+        min-height: 18vw !important;
+        max-width: 18vw !important;
+        max-height: 18vw !important;
+        position: relative;
+        margin: 1.5vw;
+    }
+    .group-event-image-wrapperr{
+        min-width: 20vw !important;
+        min-height: 20vw !important;
+        max-width: 20vw !important;
+        max-height: 20vw !important;
+      }
+  
+      .glimpses-wrapper{
+        width: 1100px;
+        height: 700px;
+      }    
+      .navbar-brand-logo{
+        width: 240px;
+        height: 135px;
+    }
+
+
+      .slider-wrapper{
+        height: 40vh;    
+    }
+
+    .section-title{
+        font-size: 35px;
+     }
+    .section-subtitle{
+        font-size: 18px;
+    }
+
+ 
+}

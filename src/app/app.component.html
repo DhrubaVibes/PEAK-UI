@@ -1,0 +1,90 @@
+
+
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-brand mx-auto animated flip">
+    <img class="navbar-brand-logo" src="../assets/img/logo/logo.png">
+  </div>
+  <button class="navbar-toggler  order-first" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+    style="position: absolute;top:0;left:0;margin-top: 40px;"
+    >
+    <i class=" white fa fa-2x fa-bars"></i>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link white txt-big" href="#">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link white  txt-big" [routerLink]="[ '/menu/chef' ]">MENU</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link white  txt-big" href="#events">EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-reserve white  txt-big" href="#group-events">RESERVATIONS</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div  class="animated-d slideInUp slow">
+    <router-outlet></router-outlet>
+</div>
+
+<div  class="footer-area" id="contact">
+    <div class="footer-area-bg" data-stellar-background-ratio="0.6"></div>
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="footer-top section-padding text-center">
+                    <div class="footer-logo">
+                        <a href="#"><img src="../assets/img/logo/logo.png" alt=""></a>
+                    </div>
+                    <div class="footer-address">
+                        <p>3401 W Airport Fwy #110, Irving, TX 75062</p>
+                        <p><a href="mailto:info@peakrestaurant.com">info@peakrestaurant.com</a></p>
+                        <p><a href="tel:469-647-5500">(469) 647-5500</a></p>
+                    </div>
+                    <h4 >Hours:</h4>
+                    <p >Monday-Saturday: 11:30 AM - 02:00AM</p>
+                    <p >Sunday: 12:00 NOON - 02:00AM</p>
+                    <div class="footer-social-bookmark">
+                        <ul>
+                            <li><a href="https://www.facebook.com/peakirving/?ref=br_rs">
+                              <i class="fab fa-facebook-f"></i>
+                            </a></li>
+                            <li><a href="https://www.instagram.com/peakirving/">
+                              <i class="fab fa-instagram"></i>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="footer-menu">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="footer-copyright">
+                    <p>&copy; 2017 <a href="#">Peak Restaurant</a> All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="up-inc" style="position:fixed; bottom:20px; right:20px;z-index: 100; display: none; padding: 9px;">
+    <button type="button" class="btn btn-success" (click)="gotToTop()">Top</button>
+</div>
+
+<!--FOOER AREA END-->
